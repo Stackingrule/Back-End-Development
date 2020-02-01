@@ -1,3 +1,4 @@
+
 fn main() {
 
     // bool
@@ -29,6 +30,21 @@ fn main() {
     let arr: [u32; 5] = [1, 2, 3, 4, 5];
     println!("arr[1] = {}", arr[1]);
 
+    // 元组
+    let tup: (i32, f32, char) = (3, -3.69, '好');
+    println!("{}", tup.0);
+    println!("{}", tup.1);
+    println!("{}", tup.2);
+
+    let tup = (3, -3.69, '好');
+    println!("{}", tup.0);
+    println!("{}", tup.1);
+    println!("{}", tup.2);
+
+    let (x, y, z) = tup;
+    println!("{}", x);
+    println!("{}", y);
+    println!("{}", z);
 
     println!("Hello, world!");
 }
