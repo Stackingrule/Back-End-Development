@@ -1,0 +1,3 @@
+C:\Users\intje\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\EasyTcpClient.dir/objects.a
+C:\TDM-GCC-64\bin\ar.exe cr CMakeFiles\EasyTcpClient.dir/objects.a @CMakeFiles\EasyTcpClient.dir\objects1.rsp
+C:\TDM-GCC-64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\EasyTcpClient.dir/objects.a -Wl,--no-whole-archive  -o EasyTcpClient.exe -Wl,--out-implib,libEasyTcpClient.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\EasyTcpClient.dir\linklibs.rsp
