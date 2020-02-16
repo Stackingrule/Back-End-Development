@@ -20,9 +20,3 @@ class Student2 extends Pserson2 {
   override val name: String = "wangwu"
   override val age: Int = 12
 }
-
-/**
- * 类的一个或者多个方法没有完整的实现
- * /
-
-
