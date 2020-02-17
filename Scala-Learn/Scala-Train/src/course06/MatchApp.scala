@@ -28,4 +28,16 @@ object MatchApp extends App{
   judgeGrade("B")
   judgeGrade("C")
 
+
+  def greeting(list: List[String]):Unit = {
+    list match {
+      case "zhangsan"::Nil => println("Hi zhangsan")
+      case x::y::Nil => println("Hi " + x + ", " + y)
+      case "zhangsan"::tail => println("Hi zhangsan and other friends...")
+      case _ => println("Hi everybody")
+    }
+  }
+
+  greeting(List("zhangsan"))
+
 }
