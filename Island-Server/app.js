@@ -1,18 +1,12 @@
 const Koa = require('koa')
-
+const Router = require('koa-router')
 const app = new Koa()   // 应用程序对象
+const router = new Router()
 
-
-
-app.use( (ctx, next) => {
-    console.log(1)
-    next()
-    console.log(2)
+router.get('classic/latest', (ctx, next) => {
+    ctx.body = {key: 'classic'}
 })
 
-app.use((cyx, next) => {
-    console.log(3)
-    //next()
-    console.log(4)
-})
+app.use(router.routes())
+
 app.listen(3000)
