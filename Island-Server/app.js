@@ -1,12 +1,22 @@
 const Koa = require('koa')
+const requireDirectory = require('require-directory')
 const Router = require('koa-router')
-const app = new Koa()   // 应用程序对象
-const router = new Router()
 
-router.get('classic/latest', (ctx, next) => {
-    ctx.body = {key: 'classic'}
+const app = new Koa();
+
+requireDirectory(module, './api', {
+    visit: whenLoadModule
 })
 
-app.use(router.routes())
+function whenLoadModule(obj) {
+    if (obj instanceof Router) {
+        app.use(obj.routes())
+    }
+}
 
-app.listen(3000)
+// app.use(book.routes());
+// app.use(classic.routes());
+
+
+
+app.listen(3000);
